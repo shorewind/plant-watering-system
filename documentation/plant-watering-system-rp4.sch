@@ -1,0 +1,572 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Plant Watering System"
+Date "November 2022"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR?
+U 1 1 6363DBF1
+P 5200 3500
+F 0 "#PWR?" H 5200 3250 50  0001 C CNN
+F 1 "GND" H 5205 3327 50  0000 C CNN
+F 2 "" H 5200 3500 50  0001 C CNN
+F 3 "" H 5200 3500 50  0001 C CNN
+	1    5200 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6363E14F
+P 7400 3500
+F 0 "#PWR?" H 7400 3250 50  0001 C CNN
+F 1 "GND" H 7405 3327 50  0000 C CNN
+F 2 "" H 7400 3500 50  0001 C CNN
+F 3 "" H 7400 3500 50  0001 C CNN
+	1    7400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1900 5200 1900
+Wire Wire Line
+	5200 1900 5200 2700
+Wire Wire Line
+	5500 2700 5200 2700
+Connection ~ 5200 2700
+Wire Wire Line
+	5200 2700 5200 3400
+Wire Wire Line
+	5500 3400 5200 3400
+Connection ~ 5200 3400
+Wire Wire Line
+	5200 3400 5200 3500
+Wire Wire Line
+	7100 2900 7400 2900
+Wire Wire Line
+	7400 2900 7400 3100
+Wire Wire Line
+	7100 2100 7400 2100
+Wire Wire Line
+	7400 2100 7400 2400
+Connection ~ 7400 2900
+Wire Wire Line
+	7100 2400 7400 2400
+Connection ~ 7400 2400
+Wire Wire Line
+	7400 2400 7400 2900
+Wire Wire Line
+	7100 3100 7400 3100
+Connection ~ 7400 3100
+Wire Wire Line
+	7400 3100 7400 3500
+$Comp
+L power:+5V #PWR?
+U 1 1 6363F0E4
+P 7250 1400
+F 0 "#PWR?" H 7250 1250 50  0001 C CNN
+F 1 "+5V" H 7265 1573 50  0000 C CNN
+F 2 "" H 7250 1400 50  0001 C CNN
+F 3 "" H 7250 1400 50  0001 C CNN
+	1    7250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6363F71B
+P 5350 1400
+F 0 "#PWR?" H 5350 1250 50  0001 C CNN
+F 1 "+3V3" H 5365 1573 50  0000 C CNN
+F 2 "" H 5350 1400 50  0001 C CNN
+F 3 "" H 5350 1400 50  0001 C CNN
+	1    5350 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1500 7250 1500
+Wire Wire Line
+	7250 1500 7250 1400
+Wire Wire Line
+	7100 1600 7250 1600
+Wire Wire Line
+	7250 1600 7250 1500
+Connection ~ 7250 1500
+Wire Wire Line
+	5500 1500 5350 1500
+Wire Wire Line
+	5350 1500 5350 1400
+Connection ~ 5350 1500
+Wire Wire Line
+	5500 2300 5350 2300
+Wire Wire Line
+	5350 1500 5350 2300
+$Comp
+L plant-watering-system:Raspberry_Pi_4 U?
+U 1 1 63646DDE
+P 6300 2400
+F 0 "U?" H 6300 1250 50  0001 C CNN
+F 1 "Raspberry_Pi_4" H 6300 3433 50  0000 C CNN
+F 2 "" H 6300 1250 50  0001 C CNN
+F 3 "" H 6300 1250 50  0001 C CNN
+	1    6300 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 1700 0    50   Input ~ 0
+AHT20_SCL
+Text GLabel 4650 2000 0    50   Input ~ 0
+Moisture_Sensor_SCL
+Wire Wire Line
+	4650 1700 4950 1700
+Wire Wire Line
+	4650 2000 4950 2000
+Wire Wire Line
+	4950 2000 4950 1700
+Connection ~ 4950 1700
+Wire Wire Line
+	4950 1700 5500 1700
+Text GLabel 4650 1300 0    50   Input ~ 0
+AHT20_SDA
+Text GLabel 4650 1600 0    50   Input ~ 0
+Moisture_Sensor_SDA
+Wire Wire Line
+	4650 1600 4950 1600
+Wire Wire Line
+	4650 1300 4950 1300
+Wire Wire Line
+	4950 1300 4950 1600
+Connection ~ 4950 1600
+Wire Wire Line
+	4950 1600 5500 1600
+Text GLabel 4850 3100 0    50   Input ~ 0
+L9110_IB
+Wire Wire Line
+	5500 3100 4850 3100
+$Comp
+L power:+5V #PWR?
+U 1 1 636F36F9
+P 3600 5150
+F 0 "#PWR?" H 3600 5000 50  0001 C CNN
+F 1 "+5V" H 3615 5323 50  0000 C CNN
+F 2 "" H 3600 5150 50  0001 C CNN
+F 3 "" H 3600 5150 50  0001 C CNN
+	1    3600 5150
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 2200 2    50   Input ~ 0
+LCD_D6
+Text GLabel 7550 2300 2    50   Input ~ 0
+LCD_D5
+Text GLabel 7550 2500 2    50   Input ~ 0
+LCD_D4
+Text GLabel 7550 2600 2    50   Input ~ 0
+LCD_E
+Text GLabel 7550 2700 2    50   Input ~ 0
+LCD_RS
+Text GLabel 7550 2800 2    50   Input ~ 0
+LED
+Text GLabel 7550 2000 2    50   Input ~ 0
+LCD_D7
+Wire Wire Line
+	7100 2000 7550 2000
+Wire Wire Line
+	7100 2200 7550 2200
+Wire Wire Line
+	7100 2300 7550 2300
+Wire Wire Line
+	7100 2500 7550 2500
+Wire Wire Line
+	7100 2600 7550 2600
+Wire Wire Line
+	7100 2700 7550 2700
+Wire Wire Line
+	7100 2800 7550 2800
+$Comp
+L power:+5V #PWR?
+U 1 1 6371914C
+P 9150 4200
+F 0 "#PWR?" H 9150 4050 50  0001 C CNN
+F 1 "+5V" H 9165 4373 50  0000 C CNN
+F 2 "" H 9150 4200 50  0001 C CNN
+F 3 "" H 9150 4200 50  0001 C CNN
+	1    9150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 63716391
+P 9150 2600
+F 0 "#PWR?" H 9150 2450 50  0001 C CNN
+F 1 "+5V" H 9165 2773 50  0000 C CNN
+F 2 "" H 9150 2600 50  0001 C CNN
+F 3 "" H 9150 2600 50  0001 C CNN
+	1    9150 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4450 9150 4200
+Wire Wire Line
+	9150 3150 9150 2600
+Text GLabel 9000 4550 0    50   Input ~ 0
+GPIO2_SDA1
+Wire Wire Line
+	9000 4650 9350 4650
+Wire Wire Line
+	9000 4550 9350 4550
+Text GLabel 9000 4650 0    50   Input ~ 0
+GPIO3_SCL1
+Wire Wire Line
+	9700 3050 9700 3300
+Wire Wire Line
+	9600 3050 9600 3300
+Text GLabel 9700 3300 3    50   Input ~ 0
+GPIO2_SDA1
+Text GLabel 9600 3300 3    50   Input ~ 0
+GPIO3_SCL1
+Wire Wire Line
+	9250 4350 9250 4800
+Wire Wire Line
+	9350 4350 9250 4350
+$Comp
+L power:GND #PWR?
+U 1 1 6364E2BB
+P 9250 4800
+F 0 "#PWR?" H 9250 4550 50  0001 C CNN
+F 1 "GND" H 9255 4627 50  0000 C CNN
+F 2 "" H 9250 4800 50  0001 C CNN
+F 3 "" H 9250 4800 50  0001 C CNN
+	1    9250 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6364DC28
+P 9500 3050
+F 0 "#PWR?" H 9500 2800 50  0001 C CNN
+F 1 "GND" H 9505 2877 50  0000 C CNN
+F 2 "" H 9500 3050 50  0001 C CNN
+F 3 "" H 9500 3050 50  0001 C CNN
+	1    9500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4450 9350 4450
+Wire Wire Line
+	9400 3150 9400 3050
+Wire Wire Line
+	9150 3150 9400 3150
+$Comp
+L plant-watering-system:AHT20 U?
+U 1 1 63645A74
+P 9550 2800
+F 0 "U?" H 9800 2800 50  0001 C CNN
+F 1 "AHT20" H 9778 2742 50  0000 L CNN
+F 2 "" H 9800 2800 50  0001 C CNN
+F 3 "" H 9800 2800 50  0001 C CNN
+	1    9550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L plant-watering-system:Capacitive_Moisture_Sensor U?
+U 1 1 63644831
+P 9650 4600
+F 0 "U?" H 9650 4450 50  0001 C CNN
+F 1 "Capacitive_Moisture_Sensor" H 9878 4705 50  0000 L CNN
+F 2 "" H 9650 5000 50  0001 C CNN
+F 3 "" H 9650 5000 50  0001 C CNN
+	1    9650 4600
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8300 5100 11000 5100
+Wire Notes Line
+	11000 5100 11000 2200
+Wire Notes Line
+	11000 2200 8300 2200
+Wire Notes Line
+	8300 2200 8300 5100
+Wire Notes Line
+	3650 3750 8050 3750
+Wire Notes Line
+	8050 3750 8050 1000
+Wire Notes Line
+	8050 1000 3650 1000
+Wire Notes Line
+	3650 1000 3650 3750
+Wire Notes Line
+	3900 4250 3900 7000
+Wire Notes Line
+	3400 3800 3400 2450
+Text Notes 4550 950  2    50   ~ 0
+Single-Board Computer
+Text Notes 8600 2150 2    50   ~ 0
+Sensors
+Connection ~ 3600 5500
+Wire Wire Line
+	3600 6100 3600 5500
+Wire Wire Line
+	3600 5500 3600 5150
+Text Notes 1350 2400 2    50   ~ 0
+LED Indicator
+Text Notes 1550 4200 2    50   ~ 0
+16x02 LCD Display
+Wire Notes Line
+	3400 2450 850  2450
+Wire Notes Line
+	850  3800 3400 3800
+Wire Notes Line
+	850  2450 850  3800
+Wire Notes Line
+	850  7000 850  4250
+Wire Notes Line
+	3900 7000 850  7000
+Wire Notes Line
+	850  4250 3900 4250
+Wire Wire Line
+	2900 5100 2900 4600
+Wire Wire Line
+	2700 5100 2700 4600
+Wire Wire Line
+	2000 5100 2000 4650
+Wire Wire Line
+	1900 5100 1900 4650
+Wire Wire Line
+	1800 5100 1800 4650
+Wire Wire Line
+	1700 5100 1700 4650
+Text GLabel 2900 4600 1    50   Input ~ 0
+GPIO8
+Text GLabel 2700 4600 1    50   Input ~ 0
+GPIO7
+Text GLabel 2000 4650 1    50   Input ~ 0
+GPIO25
+Text GLabel 1900 4650 1    50   Input ~ 0
+GPIO24
+Text GLabel 1800 4650 1    50   Input ~ 0
+GPIO23
+Text GLabel 1700 4650 1    50   Input ~ 0
+GPIO18
+$Comp
+L power:+5V #PWR?
+U 1 1 636DEDAC
+P 2500 6400
+F 0 "#PWR?" H 2500 6250 50  0001 C CNN
+F 1 "+5V" H 2515 6573 50  0000 C CNN
+F 2 "" H 2500 6400 50  0001 C CNN
+F 3 "" H 2500 6400 50  0001 C CNN
+	1    2500 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 636DE8A6
+P 2500 6700
+F 0 "#PWR?" H 2500 6450 50  0001 C CNN
+F 1 "GND" H 2505 6527 50  0000 C CNN
+F 2 "" H 2500 6700 50  0001 C CNN
+F 3 "" H 2500 6700 50  0001 C CNN
+	1    2500 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 6550 2650 6550
+Wire Wire Line
+	2900 5900 2900 6550
+Wire Wire Line
+	1150 2800 1150 3450
+$Comp
+L Device:LED D2
+U 1 1 636685DB
+P 1650 2800
+F 0 "D2" H 1643 3017 50  0001 C CNN
+F 1 "LED" H 1643 2926 50  0000 C CNN
+F 2 "" H 1650 2800 50  0001 C CNN
+F 3 "~" H 1650 2800 50  0001 C CNN
+	1    1650 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2800 1150 2800
+Wire Wire Line
+	1800 2800 2150 2800
+Text GLabel 2900 2800 2    50   Input ~ 0
+GPIO1
+Wire Wire Line
+	2450 2800 2900 2800
+$Comp
+L Device:R_US R2
+U 1 1 636698C6
+P 2300 2800
+F 0 "R2" V 2095 2800 50  0001 C CNN
+F 1 "R" V 2186 2800 50  0000 C CNN
+F 2 "" V 2340 2790 50  0001 C CNN
+F 3 "~" H 2300 2800 50  0001 C CNN
+	1    2300 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 6370130A
+P 2500 6550
+F 0 "RV?" H 2431 6596 50  0001 R CNN
+F 1 "R_POT" H 2431 6505 50  0000 R CNN
+F 2 "" H 2500 6550 50  0001 C CNN
+F 3 "~" H 2500 6550 50  0001 C CNN
+	1    2500 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6100 3600 6100
+Wire Wire Line
+	2500 5900 2500 6100
+Wire Wire Line
+	3100 5500 3600 5500
+Wire Wire Line
+	1200 6000 1200 6100
+Connection ~ 1200 6000
+Wire Wire Line
+	2600 6000 1200 6000
+Wire Wire Line
+	2600 5900 2600 6000
+Wire Wire Line
+	1200 5500 1200 6000
+Connection ~ 1200 5500
+Wire Wire Line
+	1500 5500 1200 5500
+Wire Wire Line
+	1200 4850 1200 5500
+Wire Wire Line
+	2800 4850 1200 4850
+Wire Wire Line
+	2800 5100 2800 4850
+$Comp
+L power:GND #PWR?
+U 1 1 636E65C3
+P 1200 6100
+F 0 "#PWR?" H 1200 5850 50  0001 C CNN
+F 1 "GND" H 1205 5927 50  0000 C CNN
+F 2 "" H 1200 6100 50  0001 C CNN
+F 3 "" H 1200 6100 50  0001 C CNN
+	1    1200 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:WC1602A DS?
+U 1 1 6369964C
+P 2300 5500
+F 0 "DS?" V 2254 6344 50  0001 L CNN
+F 1 "WC1602A" V 2345 6344 50  0000 L CNN
+F 2 "Display:WC1602A" H 2300 4600 50  0001 C CIN
+F 3 "http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf" H 3000 5500 50  0001 C CNN
+	1    2300 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63671621
+P 1150 3450
+F 0 "#PWR?" H 1150 3200 50  0001 C CNN
+F 1 "GND" H 1155 3277 50  0000 C CNN
+F 2 "" H 1150 3450 50  0001 C CNN
+F 3 "" H 1150 3450 50  0001 C CNN
+	1    1150 3450
+	1    0    0    -1  
+$EndComp
+Text Notes 5600 4600 2    50   ~ 0
+3.3V Submersible Water Pump
+Wire Notes Line
+	4450 6100 4450 4650
+Wire Notes Line
+	7700 4650 4450 4650
+Wire Notes Line
+	7700 6100 7700 4650
+Wire Notes Line
+	4450 6100 7700 6100
+Wire Wire Line
+	6350 5350 6750 5350
+$Comp
+L power:+3V3 #PWR?
+U 1 1 636C7FEB
+P 5450 5200
+F 0 "#PWR?" H 5450 5050 50  0001 C CNN
+F 1 "+3V3" H 5465 5373 50  0000 C CNN
+F 2 "" H 5450 5200 50  0001 C CNN
+F 3 "" H 5450 5200 50  0001 C CNN
+	1    5450 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 6750 5350 2    50   Input ~ 0
+GPIO13_PWM1
+Wire Wire Line
+	5450 5350 5450 5200
+Connection ~ 5450 5350
+Wire Wire Line
+	5750 5350 5450 5350
+Wire Wire Line
+	5450 5450 5450 5350
+Wire Wire Line
+	4750 5650 5650 5650
+Wire Wire Line
+	5650 5550 5750 5550
+Wire Wire Line
+	5650 5650 5650 5550
+Wire Wire Line
+	5650 5250 5750 5250
+Wire Wire Line
+	5650 4900 5650 5250
+Wire Wire Line
+	4750 4900 5650 4900
+Wire Wire Line
+	4750 5150 4750 4900
+Connection ~ 6500 5550
+Wire Wire Line
+	6500 5550 6500 5600
+$Comp
+L power:GND #PWR?
+U 1 1 6368182C
+P 6500 5600
+F 0 "#PWR?" H 6500 5350 50  0001 C CNN
+F 1 "GND" H 6505 5427 50  0000 C CNN
+F 2 "" H 6500 5600 50  0001 C CNN
+F 3 "" H 6500 5600 50  0001 C CNN
+	1    6500 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 5550 6350 5550
+Wire Wire Line
+	6500 5250 6500 5550
+Wire Wire Line
+	6350 5250 6500 5250
+Wire Wire Line
+	5450 5450 5750 5450
+$Comp
+L plant-watering-system:L9110 U2
+U 1 1 63663BCD
+P 6050 5400
+F 0 "U2" H 6050 5775 50  0001 C CNN
+F 1 "L9110" H 6050 5683 50  0000 C CNN
+F 2 "" H 6050 5150 50  0001 C CNN
+F 3 "" H 6050 5150 50  0001 C CNN
+	1    6050 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_DC M?
+U 1 1 63666343
+P 4750 5350
+F 0 "M?" H 4908 5346 50  0001 L CNN
+F 1 "Motor_DC" H 4908 5300 50  0000 L CNN
+F 2 "" H 4750 5260 50  0001 C CNN
+F 3 "~" H 4750 5260 50  0001 C CNN
+	1    4750 5350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
