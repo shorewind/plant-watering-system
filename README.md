@@ -8,13 +8,16 @@ Note: Program intended to work in a Linux environment
 
 ![plant-watering-system-photo](documentation/plant-watering-system.jpg)
 
-<h3>Block Diagram</h3>
+### Block Diagram
+
 ![block-diagram](documentation/block-diagram.jpg)
 
-<h3>Electrical Schematic</h3>
+### Electrical Schematic
+
 ![schematic](documentation/schematic.png)
 
-<h3>Web Server with Data Plots</h3>
+### Web Server with Data Plots
+
 ![web-data](documentation/web-data.png)
 
 Additional info to be added soon...
